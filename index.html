@@ -1,77 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Y Concierge — Concept Prototype</title>
-<style>
-:root{--blue:#0060af;--deep:#153b66;--cyan:#00a8e0;--orange:#f47920;--green:#5c9e31;--bg:#f5f7f9;--text:#263746}
-*{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}
-.topnote{background:#172b3a;color:white;text-align:center;padding:7px;font-size:12px;letter-spacing:.3px}
-header{background:white;border-bottom:1px solid #dde4e8;padding:18px 6%;display:flex;align-items:center;justify-content:space-between}
-.brand{display:flex;align-items:center;gap:14px}.ymark{font-size:42px;font-weight:900;color:var(--blue);line-height:.8}.brand b{font-size:20px}.brand small{display:block;color:#647785;margin-top:3px}
-nav span{margin-left:24px;font-weight:700;color:#40566a;font-size:14px}
-.hero{background:linear-gradient(110deg,#0060af,#00a8e0);color:white;padding:45px 6% 52px}
-.hero h1{font-size:42px;margin:0 0 10px;max-width:650px}.hero p{font-size:18px;max-width:650px;line-height:1.5}
-.layout{max-width:1120px;margin:-25px auto 60px;padding:0 20px;display:grid;grid-template-columns:1.5fr .75fr;gap:22px}
-.card{background:white;border-radius:16px;box-shadow:0 8px 30px rgba(30,60,80,.12);overflow:hidden}
-.chathead{padding:20px 22px;border-bottom:1px solid #e7ecef;display:flex;align-items:center;gap:12px}.avatar{width:44px;height:44px;border-radius:50%;background:var(--blue);color:white;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:bold}.online{font-size:12px;color:#4d8b36}
-.chat{height:500px;overflow:auto;padding:22px;background:#fbfcfd}.msg{max-width:82%;padding:13px 15px;border-radius:14px;margin:0 0 12px;line-height:1.42;animation:fade .3s ease}.agent{background:#eaf5fb;border-bottom-left-radius:4px}.user{background:var(--blue);color:white;margin-left:auto;border-bottom-right-radius:4px}
-.actions{display:flex;flex-wrap:wrap;gap:9px;margin:10px 0 18px}.btn{border:1px solid var(--blue);color:var(--blue);background:white;border-radius:22px;padding:10px 14px;font-weight:700;cursor:pointer}.btn:hover{background:#eef7fc}.primary{background:var(--blue);color:white}
-.program{border:1px solid #dce5ea;border-radius:12px;padding:14px;margin:10px 0;background:white}.program strong{color:var(--deep)}.tag{display:inline-block;font-size:11px;background:#eaf6df;color:#467628;padding:4px 7px;border-radius:12px;margin-bottom:7px;font-weight:bold}.why{font-size:13px;color:#617484;margin-top:7px}
-.side{padding:22px}.side h3{margin-top:0;color:var(--deep)}.quick{border-top:1px solid #e5eaed;padding:15px 0}.quick:first-of-type{border-top:0}.quick b{display:block;margin-bottom:5px}.quick span{font-size:13px;color:#657887}
-.footerbar{padding:15px 22px;border-top:1px solid #e6ecef;font-size:12px;color:#71818d;background:white}
-@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
-@media(max-width:800px){nav{display:none}.layout{grid-template-columns:1fr}.hero h1{font-size:32px}.chat{height:520px}}
-</style>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#143f42">
+<title>Y Concierge | YMCA of Metro Atlanta · Concept Prototype</title>
+<link rel="stylesheet" href="assets/styles.css"><script defer src="assets/app.js"></script>
 </head>
 <body>
-<div class="topnote">CONCEPT PROTOTYPE — NOT A LIVE YMCA SYSTEM · DEMONSTRATION DATA ONLY</div>
-<header>
-  <div class="brand"><div class="ymark">Y</div><div><b>YMCA OF METRO ATLANTA</b><small>For a better us.®</small></div></div>
-  <nav><span>Programs</span><span>Locations</span><span>Membership</span><span>Give</span></nav>
-</header>
-<section class="hero"><h1>Find the right program for your family.</h1><p>Meet Y Concierge — a concept for a simpler, more personal way to discover programs, understand membership options, and register.</p></section>
-<div class="layout">
-<section class="card">
-<div class="chathead"><div class="avatar">Y</div><div><b>Y Concierge</b><div class="online">● Ready to help</div></div></div>
-<div class="chat" id="chat">
-<div class="msg agent">Hi Matt! 👋 How can I help your family today?</div>
-<div class="actions" id="start">
-<button class="btn primary" onclick="startFlow()">Find a program</button>
-<button class="btn" onclick="simple('Check my balance')">Check my balance</button>
-<button class="btn" onclick="simple('Update my information')">Update my information</button>
-<button class="btn" onclick="simple('Membership help')">Membership help</button>
+<div class="prototype"><span class="dot"></span> Concept Prototype — Not a Live YMCA System <span class="demo-label">· Fictional demonstration data</span></div>
+<header class="site-header"><a class="brand" href="./" aria-label="Y Concierge home"><span class="y-mark">Y<span>the</span></span><span>YMCA<small>OF METRO ATLANTA</small></span></a><div class="header-right"><span class="member-label">Your family. Your community.</span><span class="avatar">M</span><span>Hi, Matt</span></div></header>
+<main>
+<section class="intro"><div><p class="eyebrow">MORE POSSIBILITY. LESS PLANNING.</p><h1>A little guidance.<br>A world of <em>possibility.</em></h1><p class="intro-copy">From their first splash to their next big milestone.<br>Let’s find what’s right for your family.</p></div><div class="hero-art" aria-hidden="true"><div class="sun"></div><div class="ring"></div><div class="ripple r1"></div><div class="ripple r2"></div><div class="ripple r3"></div><span class="art-caption">GROW TOGETHER.</span><span class="art-plus">✳</span></div></section>
+<div class="workspace">
+<aside class="household"><p class="eyebrow">YOUR FAMILY AT THE Y</p><h2>The Matt household</h2><span class="subtle">Fictional member preview</span><div class="family-row"><span class="person matt">M</span><div><strong>Matt</strong><small>Parent · 1 adult</small></div><span class="pill">You</span></div><div class="family-row" id="legend-row"><span class="person legend">L</span><div><strong>Legend</strong><small>Age 5 · Child</small></div></div><div class="family-row" id="coast-row"><span class="person coast">C</span><div><strong>Coast</strong><small>Age 2 · Child</small></div></div><div class="home-y"><span class="eyebrow">YOUR HOME Y</span><strong>Carl E. Sanders<br>Family YMCA</strong><span>Already part of your family context</span></div><div class="context-note"><span>✓</span><p>Less to fill in.<br>More to look forward to.</p></div></aside>
+<section class="concierge" aria-label="Y Concierge guided experience"><div class="concierge-header"><div class="concierge-id"><span class="spark">✳</span><div><h2>Y Concierge</h2><p>A little help for your next big thing</p></div></div><button class="text-button" id="restart">↻ <span>Restart demo</span></button></div><ol class="progress" aria-label="Registration progress" id="progress"></ol><div id="stage" class="stage"></div><div class="concierge-footer"><span>◈ &nbsp;Your family context stays with you</span><button class="text-button" data-help="Talk to the Y team">Talk to the Y team ↗</button></div></section>
 </div>
-</div>
-<div class="footerbar">Future-state experience prototype. Actions and records shown here are simulated and are not connected to Salesforce, Traction Rec, payment systems, or YMCA production data.</div>
-</section>
-<aside class="card side">
-<h3>Designed around your family</h3>
-<div class="quick"><b>Household-aware</b><span>Uses family context before asking you to search by location.</span></div>
-<div class="quick"><b>Personal recommendations</b><span>Matches programs to the child, age, schedule and home Y.</span></div>
-<div class="quick"><b>Membership guidance</b><span>Explains options when a selected program requires membership.</span></div>
-<div class="quick"><b>Guided registration</b><span>Moves from discovery toward enrollment without bouncing between pages.</span></div>
-</aside>
-</div>
-<script>
-const chat=document.getElementById('chat');
-function add(text,type='agent'){let d=document.createElement('div');d.className='msg '+type;d.innerHTML=text;chat.appendChild(d);chat.scrollTop=chat.scrollHeight}
-function actions(items){let d=document.createElement('div');d.className='actions';items.forEach(i=>{let b=document.createElement('button');b.className='btn'+(i.primary?' primary':'');b.innerHTML=i.label;b.onclick=()=>{d.remove();i.fn()};d.appendChild(b)});chat.appendChild(d);chat.scrollTop=chat.scrollHeight}
-function startFlow(){document.getElementById('start').remove();add('I want to find swim lessons for my son.','user');setTimeout(()=>{add("Absolutely. I found your household. Who are we registering?");actions([{label:'Legend · Age 5',primary:true,fn:chooseChild},{label:'Coast · Age 2',fn:()=>notYet('Coast')}])},500)}
-function notYet(name){add(name,'user');setTimeout(()=>{add("Got it. For this demo, let's use Legend so I can show you the complete personalized registration journey.");actions([{label:'Choose Legend',primary:true,fn:chooseChild}])},400)}
-function chooseChild(){add('Legend','user');setTimeout(()=>{add("Great. I have Legend's age and your household's home location, so you don't need to enter those again.<br><br>When you say <b>swim lessons</b>, are you looking for beginner water confidence, stroke development, or something else?");actions([{label:'Beginner / water confidence',primary:true,fn:recommend},{label:'Stroke development',fn:recommend},{label:"I'm not sure",fn:recommend}])},500)}
-function recommend(){add('Beginner / water confidence','user');setTimeout(()=>{add("Perfect. I found three options that fit Legend. I filtered out programs that don't match his age and prepared the strongest matches first.");showPrograms()},550)}
-function showPrograms(){
-let p=document.createElement('div');p.innerHTML=`
-<div class="program"><span class="tag">BEST MATCH</span><br><strong>Swim Basics — Stage 1</strong><br>Saturday · 9:00 AM<br>Carl E. Sanders Family YMCA<br><div class="why">Why this fits: beginner-friendly, age appropriate, weekend schedule, and aligned to your home Y.</div><br><button class="btn primary" onclick="selectProgram(this)">Choose this program</button></div>
-<div class="program"><strong>Water Discovery</strong><br>Tuesday · 5:30 PM<br>Nearby YMCA location<div class="why">Strong beginner fit with an after-school time.</div></div>
-<div class="program"><strong>Swim Basics — Stage 1</strong><br>Thursday · 4:30 PM<br>Nearby YMCA location<div class="why">Age appropriate with similar beginner instruction.</div></div>`;chat.appendChild(p);chat.scrollTop=chat.scrollHeight}
-function selectProgram(btn){btn.closest('.program').parentElement.remove();add('Swim Basics — Stage 1','user');setTimeout(()=>{add("Great choice. This program requires an eligible membership. Based on your household, here are two ways to continue.");actions([{label:'Best value: Family Membership',primary:true,fn:membership},{label:'Lowest-cost eligible option',fn:membership}])},500)}
-function membership(){add('Family Membership','user');setTimeout(()=>{add("<b>Family Membership selected.</b><br><br>For this prototype, I'll simulate the membership step and continue to registration. In a live experience, authentication, pricing, eligibility and payment would be validated through approved systems.");actions([{label:'Continue to registration',primary:true,fn:confirm}])},500)}
-function confirm(){add('Continue to registration','user');setTimeout(()=>{add("<b>Ready to register Legend?</b><br>Swim Basics — Stage 1<br>Saturday · 9:00 AM<br>Carl E. Sanders Family YMCA<br><br>I'll confirm availability again before enrollment.");actions([{label:'Confirm registration',primary:true,fn:done},{label:'Go back',fn:()=>add('No problem — nothing has been submitted.') }])},500)}
-function done(){add('Confirm registration','user');setTimeout(()=>{add("🎉 <b>You're registered!</b><br><br>Legend has been added to <b>Swim Basics — Stage 1</b>.<br><br><b>Confirmation:</b> DEMO-ATL-2026<br><br>In the live experience, this is where the confirmed enrollment details and next steps would appear.");},650)}
-function simple(x){document.getElementById('start')?.remove();add(x,'user');setTimeout(()=>{add("That journey is part of the broader Y Concierge vision. For today's prototype, I've made the <b>Find a program → personalized recommendation → membership → registration</b> journey interactive.");actions([{label:'Show me the registration journey',primary:true,fn:startFlow}])},450)}
-</script>
-</body>
-</html>
+<section class="more"><div><p class="eyebrow">HERE FOR THE EVERYDAY, TOO</p><h2>One familiar place. A little more support.</h2></div><div class="more-grid"><button data-help="Membership questions"><span>♡</span>Membership questions <b>↗</b></button><button data-help="Programs & camps"><span>☀</span>Programs & camps <b>↗</b></button><button data-help="Financial assistance"><span>◇</span>Financial assistance <b>↗</b></button><button data-help="Account & payments"><span>☷</span>Account & payments <b>↗</b></button></div></section>
+</main>
+<footer class="site-footer"><strong>YMCA OF METRO ATLANTA</strong><p>Future-state experience concept. All people, prices, availability, eligibility rules and transactions are fictional.<br>No Salesforce, Traction Rec, payment or production connections. Nothing is purchased or enrolled.</p></footer>
+<dialog id="help-dialog" aria-labelledby="help-title"><button class="close" aria-label="Close dialog">×</button><p class="eyebrow">A HUMAN TOUCH, WHEN YOU NEED IT</p><h2 id="help-title"></h2><div id="help-body"></div></dialog>
+</body></html>
