@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jax Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      margin: 0;
+      padding: 40px;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: auto;
+    }
+
+    h1 {
+      color: #16325c;
+    }
+
+    .chat {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 15px rgba(0,0,0,.1);
+    }
+
+    .message {
+      padding: 12px 16px;
+      margin: 10px 0;
+      border-radius: 10px;
+    }
+
+    .agent {
+      background: #eaf3ff;
+    }
+
+    .user {
+      background: #eee;
+      text-align: right;
+    }
+
+    button {
+      background: #0176d3;
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 7px;
+      cursor: pointer;
+      margin-top: 15px;
+      font-size: 15px;
+    }
+
+    button:hover {
+      background: #014486;
+    }
+
+    #response {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>Member Concierge</h1>
+  <p>Future-State Experience Prototype</p>
+
+  <div class="chat">
+
+    <div class="message agent">
+      👋 Hi Matt! I'm Georgia, your virtual member assistant.
+      How can I help today?
+    </div>
+
+    <div class="message user">
+      I'd like to register my son for summer camp.
+    </div>
+
+    <div class="message agent">
+      Absolutely! I found your household.
+      Legend is eligible for several summer camps near you.
+    </div>
+
+    <button onclick="showCamps()">Show Available Camps</button>
+
+    <div id="response">
+
+      <div class="message agent">
+        🏕️ <strong>Adventure Camp</strong><br>
+        June 15–19<br>
+        East Lake YMCA<br>
+        Member Price: $249
+      </div>
+
+      <div class="message agent">
+        ⚽ <strong>Sports Camp</strong><br>
+        June 22–26<br>
+        Decatur YMCA<br>
+        Member Price: $219
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+function showCamps() {
+  document.getElementById("response").style.display = "block";
+}
+</script>
+
+</body>
+</html>
